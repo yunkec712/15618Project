@@ -38,17 +38,18 @@ When time permits, we are planning to compare our implementation with other matr
 
 ### Platform Choice
 
-Programming Language: C/C++
-Tools: OpenMPI
+* Programming Language: C/C++
+* Tools: OpenMPI
+
 Since we want to explore the problem in the message passing model and run it on the latedays cluster. C/C++ and OpenMPI is a suitable choice.
 
 ### Schedule
 
-Week One (11/04): Read the paper, understand the algorithms
-Week Two (11/11): High-level design of the code, implement a serialized version of Strassen-Winograd.
-Checkpoint Report by (11/15)
-Week Three (11/18): Implement the BFS variation of CAPS
-Week Four (11/25): Implement the DFS variation of CAPS
-Week Five (12/02): Experiment and optimize the two versions
-Week Six (12/09): Extra Goal
-Week Seven (12/15): Wrap up and Final report
+* Week One (11/04): Read the paper, understand the algorithms
+* Week Two (11/11): High-level design of the code, implement a serialized version of Strassen-Winograd.
+* Checkpoint Report by (11/15)
+* Week Three (11/18): Implement the BFS variation of CAPS
+* Week Four (11/25): Implement the DFS variation of CAPS
+* Week Five (12/02): Experiment and optimize the two versions
+* Week Six (12/09): Extra Goal
+* Week Seven (12/15): Wrap up and Final report
