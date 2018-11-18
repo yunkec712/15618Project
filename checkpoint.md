@@ -1,46 +1,43 @@
-Proposal
-Summary
-Our project is to implement a parallel Strassen’s matrix multiplication algorithm with OpenMPI on the latedays cluster.
+## Checkpoint
 
-Background
-Strassen’s matrix multiplication algorithm is a famous divide-and-conquer algorithm. Compared to the classical matrix multiplication algorithm, it reduces the number of subblock multiplications in each iteration from 8 to 7. Parallelizing Strassen’s matrix multiplication is a challenging and well-studied problem. Various parallel algorithms are presented by researchers to improve the performance of the problem. In our project, we limit our interest in using Message Passing Model to parallel Strassen’s matrix multiplication algorithm.
+### Progress reporting
 
-Challenges
-Keep communication cost at a low level. In our previous experience, the communication cost across nodes are pretty high. In our implementation, we should reduce the unnecessary communication among cores and optimize the communication cost in the algorithm. That is, to increase the computation-communication ratio.
+|                                                                                                |         |
+|------------------------------------------------------------------------------------------------|---------|
+| (11/04) Read the paper and understand the algorithms                                           |   Done  |
+| (11/11) High-level design of the code, implement a serialized version of the Strassen-Winograd |   Done  |
+| (11/15) Checkpoint report                                                                      |   Done  |
+| Implement the BFS variation of CAPS                                                            | Ongoing |
 
-Make full use of the memory. In order to keep communication cost at a low level, our implementation should use as much local memory as possible. However, there’s limitation in local memory capacity. Thus, our implementation needs to figure out how to make a tradeoff between the communication cost and the memory usage.
+Our current progress, which almost keeps up with our initial schedule, is good. We’ve already read through the reference paper and learned how Strassen-Winograd algorithm works. Besides, we achieved the serialized version of the algorithm and it works. However, due to the final exam of this course and several other dues, our implementation of the BFS variation of CAPS has been delayed. Luckily, it’s still under our control and we believe we would deliver the things we’ve planned.
 
-Resources
-Computers
-The latedays cluster at CMU.
+Currently, as we have a better understanding of our final project, we’ve planned to make some modifications on our schedule to better trace and process our project. The updated schedule is listed below.
 
-Code
-We are going to start from scratch with the OpenMPI as the message passing implementation.
 
-Paper & Algorithm
-We are going to implement and experiment on the Communication-Optimal Parallel Algorithm (CAPS) presented by Grey Ballard in 2012. The algorithm is based on the Strassen-Winograd algorithm, which is a faster slight variation of Strassen’s algorithm.
+| Work                                               | Participants         |
+|----------------------------------------------------|----------------------|
+| (11/16) Design the structure for the BFS variation | Yuhao Lei, Yunke Cao |
+| (11/25) Implement BFS variation of CAPS            |       Yuhao Lei      |
+| (11/30) BFS version verification and optimization  | Yuhao Lei, Yunke Cao |
+| (11/21) Design the structure for DFS variation     | Yunke Cao, Yuhao Lei |
+| (11/30) Implement DFS variation of CAPS            |       Yunke Cao      |
+| (12/04) DFS version verification and optimization  | Yunke Cao, Yuhao Lei |
+| (12/09) Extra goal: design and run benchmark test  | Yuhao Lei, Yunke Cao |
+| (12/14) Have our poster ready                      | Yuhao Lei, Yunke Cao |
+| (12/15) Final report                               | Yuhao Lei, Yunke Cao |
+| (12/16) Poster session                             | Yuhao Lei, Yunke Cao |
 
-Reference: Grey Ballard, James Demmel, Olga Holtz, Benjamin Lipshitz, and Oded Schwartz. 2012. Communication-optimal parallel algorithm for strassen's matrix multiplication. In Proceedings of the twenty-fourth annual ACM symposium on Parallelism in algorithms and architectures (SPAA '12). ACM, New York, NY, USA, 193-204. DOI: https://doi.org/10.1145/2312005.2312044
+### Poster session plan
 
-Goals and Deliverables
-Grey Ballard presented two variations of CAPS as they traverse the recursive tree of the Strassen-Winograd algorithm in either BFS or DFS. Our first goal is to have the correct implementation of both of them.
+For the poster session, our plan is to show a graph to compare our parallel version of Strassen’s Matrix Multiplication with the serialized version. If time permits, we may add our extra goal’s result to the poster, too.
 
-Our second goal is to experiment these two variations on different problem size and environment settings (number of nodes, memory limits). In the poster session, we plan to show the speedup graphs.
+### Preliminary results
 
-Extra Goal:
-When time permits, we are planning to compare our implementation with other matrix multiplication algorithms that adopt the message passing model. Design some benchmark tests and record the different metrics.
+Till now, we’ve achieved the serialized version of the Strassen-Winograd algorithm and it works. There’s one important thing to point out is that the Strassen-Winograd algorithm given in the Appendix of the paper Communication-Optimal Parallel Algorithm for Strassen’s Matrix Multiplication is wrong. We’ve checked its issue based on a very simple matrix multiplication and our implementation has fixed the problem using the correct algorithm.
 
-Platform Choice
-Programming Language: C/C++
-Tools: OpenMPI
-Since we want to explore the problem in the message passing model and run it on the latedays cluster. C/C++ and OpenMPI is a suitable choice.
+The implementation of the parallel version is ongoing.
 
-Schedule
-Week One (11/04): Read the paper, understand the algorithms
-Week Two (11/11): High-level design of the code, implement a serialized version of Strassen-Winograd.
-Checkpoint Report by (11/15)
-Week Three (11/18): Implement the BFS variation of CAPS
-Week Four (11/25): Implement the DFS variation of CAPS
-Week Five (12/02): Experiment and optimize the two versions
-Week Six (12/09): Extra Goal
-Week Seven (12/15): Wrap up and Final report
+### Summary
+
+In total, our current process is good and everything is under our control.
+
