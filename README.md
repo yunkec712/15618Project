@@ -2,3 +2,5 @@
 by Yunke Cao and Yuhao Lei
 
 [Proposal](./proposal.html).
+
+[Checkpoint](./checkpoint.html).
