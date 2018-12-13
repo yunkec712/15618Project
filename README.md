@@ -15,7 +15,9 @@ Current Schedule
 | (11/30) Design the structure for DFS variation     | Yunke Cao, Yuhao Lei | Done             |
 | (12/05) Implement DFS variation of CAPS            |       Yunke Cao      | Done             |
 | (12/10) DFS version verification and optimization  | Yunke Cao, Yuhao Lei | Done             |
-| (12/14) Extra goal: design and run benchmark test  | Yuhao Lei, Yunke Cao |                  |
-| (12/14) Have our poster ready                      | Yuhao Lei, Yunke Cao |                  |
-| (12/15) Final report                               | Yuhao Lei, Yunke Cao |                  |
+| (12/14) Have our poster ready                      | Yuhao Lei, Yunke Cao | Done             |
+| (12/15) Final report                               | Yuhao Lei, Yunke Cao | Done             |
+| (Canceled) Extra goal: benchmark test              | Yuhao Lei, Yunke Cao | Canceled         |
 | (12/16) Poster session                             | Yuhao Lei, Yunke Cao |                  |
+
+We canceled the extra goal. The reason is that we tried to find some OpenMPI implementation of Strassen's algorithm. The ones we found on Github are either: cannot compile at all, or cannot accept input matrix with large enough size to compare performance.
