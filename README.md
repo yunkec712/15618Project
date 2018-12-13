@@ -5,6 +5,8 @@ by Yunke Cao and Yuhao Lei
 
 [Checkpoint](./checkpoint.html).
 
+[Final Report](./15618 Final Report.pdf)
+
 Current Schedule
 
 | Work                                               | Participants         | Progress         |
