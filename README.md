@@ -5,7 +5,7 @@ by Yunke Cao and Yuhao Lei
 
 [Checkpoint](./checkpoint.html).
 
-[Final Report](./15618 Final Report.pdf)
+[Final Report](http://nbviewer.jupyter.org/github/yunkec712/15618Project/blob/master/15618%20Final%20Report.pdf)
 
 Current Schedule
 
